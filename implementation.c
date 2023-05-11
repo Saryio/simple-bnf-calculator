@@ -135,7 +135,6 @@ f32 evaluateExpr(InputReader *ir) {
 i32 main() {
 
   InputReader *ir = IR_create();
-  IR_print(ir);
 
   printf("Retorno da expressao: %f\n", evaluateExpr(ir));
 
