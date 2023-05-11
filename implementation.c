@@ -25,11 +25,18 @@ void IR_free(InputReader *ir) {
 }
 
 char IR_next(InputReader *ir) {
-  return ir->input[++(ir->pos)];
+  char next = ir->input[++(ir->pos)];
+  if(next == ' ') return IR_next(ir);
+  return next;
 }
 
 char IR_actual(InputReader *ir) {
-  return ir->input[ir->pos];
+  char actual = ir->input[ir->pos];
+  while (actual == ' '){
+    actual = IR_next(ir);
+  }
+  
+  return actual;
 }
 
 char IR_back(InputReader *ir) {
