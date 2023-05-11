@@ -1,5 +1,7 @@
 # Calculadora
 
+## Execute _`exec.sh`_ para iniciar o programa
+
 ## Ordem de precedencia:
 ```
   () | -
