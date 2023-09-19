@@ -3,5 +3,5 @@ if [ -e "calculator" ]
 then
   ./calculator
 else
-  gcc -lm implementation.c -o calculator; ./calculator
+  gcc implementation.c -o calculator -lm; ./calculator
 fi
